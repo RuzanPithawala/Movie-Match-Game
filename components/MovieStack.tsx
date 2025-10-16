@@ -11,7 +11,7 @@ interface MovieStackProps {
 }
 
 export default function MovieStack({ initialMovies }: MovieStackProps) {
-  const [movies, setMovies] = useState(initialMovies);
+  const [movies] = useState(initialMovies);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [likedMovies, setLikedMovies] = useState<Movie[]>([]);
   const [dislikedMovies, setDislikedMovies] = useState<Movie[]>([]);
@@ -49,7 +49,7 @@ export default function MovieStack({ initialMovies }: MovieStackProps) {
   return (
     <div className="flex flex-col items-center justify-start w-full max-w-2xl text-white px-4">
       <h2 className="text-5xl font-bold mb-3">🎉 All Done!</h2>
-      <p className="text-xl mb-8 text-gray-300">You've rated all the movies</p>
+      <p className="text-xl mb-8 text-gray-300">You&apos;ve rated all the movies</p>
       
       {/* Your Stats */}
       <div className="bg-gradient-to-br from-purple-600/30 to-blue-600/30 backdrop-blur-lg border border-white/20 p-8 rounded-2xl mb-8 w-full shadow-2xl">
